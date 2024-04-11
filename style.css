@@ -1,52 +1,48 @@
 body {
-    font-family: Console, sans-serif;
+    font-family: 'Roboto', sans-serif; /* Material You prefers Roboto */
     margin: 0;
     padding: 0;
-    background-color: #000000;
+    background-color: #fff; /* Light backgrounds are a common Material You choice */
 }
 
 .container {
     width: 80%;
     margin: auto;
-    background: rgb(0, 208, 255);
+    background: #FFDBB0; /* Use dynamic colors based on wallpaper */
     padding: 20px;
+    border-radius: 16px; /* Rounded corners are a staple of Material You */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
-    color: #91ff00;
+    color: #6750A4; /* Use a color that stands out yet fits the palette */
 }
 
 .author {
     font-style: italic;
-    color: #ffffff;
+    color: #000; /* Readable text color */
 }
 
 .story {
     text-align: justify;
+    color: #1C1B1F; /* Ensuring readability */
 }
 
 .video {
     width: 100%;
-    height: 450;
-    width: 800;
+    height: auto; /* Responsive video sizing */
+    max-width: 800px; /* Maximum size */
 }
 
 .clock {
     position: relative;
     width: 200px;
     height: 200px;
-    border: 5px solid black;
+    border: none; /* Removing the solid border */
     border-radius: 50%;
-    background-color: white;
-}
-
-.clock {
-    background-image: url('image/clock.png');
-    height: 130px;
-    width: 130px;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: #EDE7F6; /* Light purple background for a soft look */
+    overflow: hidden; /* Ensures no overflow of child elements */
+    
 }
 
 .hand {
@@ -54,31 +50,32 @@ h1 {
     bottom: 50%;
     left: 50%;
     transform-origin: 50% 100%;
+    border-radius: 10px; /* Rounded hands for a softer look */
 }
 
 .hour {
     width: 6px;
     height: 20px;
-    background-color: black;
+    background-color: #1A237E; /* A darker shade for contrast */
 }
 
 .minute {
     width: 4px;
     height: 35px;
-    background-color: blue;
+    background-color: #303F9F; /* A slightly lighter shade than the hour hand */
 }
 
 .second {
     width: 2px;
     height: 45px;
-    background-color: red;
+    background-color: #C62828; /* A pop of color for the second hand */
 }
 
 .center-point {
     position: absolute;
-    width: 6px;
-    height: 6px;
-    background-color: black;
+    width: 12px; /* Slightly larger for emphasis */
+    height: 12px;
+    background-color: #000;
     border-radius: 50%;
     left: 50%;
     top: 50%;
