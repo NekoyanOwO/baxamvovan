@@ -42,8 +42,14 @@ h1 {
     border-radius: 50%;
     background-color: #EDE7F6; /* Light purple background for a soft look */
     overflow: hidden; /* Ensures no overflow of child elements */
+}
+
+.clock {
     background-image: url('image/clock.png');
-    
+    width: 130px;
+    height: 130px;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .hand {
