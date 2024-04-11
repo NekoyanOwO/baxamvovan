@@ -42,6 +42,7 @@ h1 {
     border-radius: 50%;
     background-color: #EDE7F6; /* Light purple background for a soft look */
     overflow: hidden; /* Ensures no overflow of child elements */
+    background-image: url('image/clock.png');
     
 }
 
