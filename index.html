@@ -5,23 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NekoyanUwU</title>
     <link rel="stylesheet" href="style.css">
+    <script>
+        function generateAnswer() {
+          var question = document.getElementById("questionInput").value;
+          if (question.trim() === "") {
+            alert("Please enter a question.");
+            return;
+          }
+          var randomNumber = Math.floor(Math.random() * 2);
+          var answer = (randomNumber === 0) ? "Yes" : "No";
+          
+          document.getElementById("botAnswer").innerHTML = "Bot says: " + answer;
+        }
+    </script>
+    <script src="script.js"></script>
 </head>
 <body>
-    <div class="container">
-        <center><h1><img src="image/thumbnail.png" height="250"></h1>
-        <p class="artist">Tạo bởi: <i><a href="https://www.facebook.com/NekoyanUwU">Kuro Nekoyan</a></i></p></center>
+    <header class="container">
+        <figure class="image">
+            <a href="file:///D:/x%C3%A0m/web%20t%E1%BB%B1%20l%C3%A0m/index.html"><img src="image/thumbnail.png" height="45"></a>
+        </figure>
         <div class="story">
-            <center><p>Đủ thứ ba xàm vớ vẩn linh ta linh tinh ở đây !!</p>
+            <em>Đủ thứ ba xàm vớ vẩn linh ta linh tinh ở đây !!</em>
+            <p class="artist"><em>Tạo bởi: </em><i><a href="https://www.facebook.com/NekoyanUwU">Kuro Nekoyan</a></i></p>
+        </div>
+    </header>
+    <div class="content">
+        <div class="video">
             <video width="800" height="450" controls>
-                <source src="video/video.mp4" type="video/mp4" volume="60"></video></center>
+                <source src="video/video.mp4" type="video/mp4"></video>
+        </div>
+        <div class="bot">
+            <h2>Yes or No Bot</h2>
+            <label for="questionInput">Enter your question:</label><br>
+            <input type="text" id="questionInput" name="questionInput"><br>
+            <button onclick="generateAnswer()">Ask the Bot</button> 
+            <p id="botAnswer"></p>
+        </div>
+        <div class="osu!beatmap">
+            <h2>My osu!beatmap</h2>
+            <ul>
+                <li><a href="osu!beatmap/Mrs. GREEN APPLE - Samama Festival! (katagiri bootleg).osz">Mrs. GREEN APPLE - Samama Festival! (katagiri bootleg)</a></li>
+            </ul>
         </div>
         <div class="clock">
-             <div class="hand hour" id="hour-hand"></div>
-             <div class="hand minute" id="minute-hand"></div>
-             <div class="hand second" id="second-hand"></div>
-             <div class="center-point"></div>
+            <div class="hand hour" id="hour-hand"></div>
+            <div class="hand minute" id="minute-hand"></div>
+            <div class="hand second" id="second-hand"></div>
+            <div class="center-point"></div>
         </div>
-        <script src="script.js"></script>
     </div>
 </body>
-</html>
+</html> 
