@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>America Ya :D</title>
+    <style>
+        #inputText {
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+    <header class="container">
+        <div class="topnav">
+            <div class="image">
+                <a href="#home"><img src="image/thumbnail.png" height="33"></a>
+            </div>
+            <div class="story">
+                <p><em>Đủ thứ ba xàm vớ vẩn linh ta linh tinh ở đây !!</em></p>
+            </div>
+        </div>
+    </header>
+    <div class="content">
+        <div class=AmericaYa>
+            <b>You: </b>
+            <input type="text" id="inputText" placeholder="America Ya :D" onkeypress="checkEnter(event)">
+            <button onclick="displayMessage()">Enter</button>
+            <div id="message"></div>
+            <script>
+                function displayMessage() {
+                    var input = document.getElementById("inputText").value;
+                    var message = "";
+                    if (input === "America Ya :D") {
+                        for (var i = 0; i < 727; i++) {
+                            message += "Hallo :D<br>";
+                        }
+                    } else {
+                        for (var i = 0; i < 727; i++) {
+                            message += "Life is not Daijoubu :(<br>";
+                        }
+                    }
+                    document.getElementById("message").innerHTML = message;
+                }
+                function checkEnter(event) {
+                    if (event.keyCode === 13) {
+                        displayMessage();
+                    }
+                }
+            </script>
+        </div>
+    </div>
+    <div class="artist">
+        <p class="artist"><em>Tạo bởi: </em><b><i><a href="https://www.facebook.com/NekoyanUwU">Kuro Nekoyan</a></i></b></p>
+    </div>
+</body>
+</html>
