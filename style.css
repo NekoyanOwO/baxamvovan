@@ -99,12 +99,16 @@ h1 {
     width: 4px;
     height: 20px;
     background-color: black;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 .minute {
     width: 3px;
     height: 35px;
     background-color: blue;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
 }
 
 .second {
@@ -112,6 +116,8 @@ h1 {
     height: 45px;
     background-color: red;
     transition: transform 0.5s ease-in-out;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
 }
 
 .center-point {
