@@ -1,11 +1,20 @@
 body {
     font-family: cursive;
+    font-size: 100%;
     margin: 0;
     padding: 0;
     background-color: #000000;
 }
 
+@media only screen and (max-width: 600px) {
+    body {
+        background-color: #000000;
+    }
+
 .container {
+    display: flex;
+    flex-wrap: wrap;
+    
     .topnav {
         font-family: Arial, sans-serif;
         overflow: hidden;
@@ -36,6 +45,10 @@ body {
     }
 }
 
+.item {
+    flex: 1 1 200px;
+}
+
 .image {
     padding: 30px;
 }
@@ -51,6 +64,7 @@ body {
 
 h1 {
     color: #91ff00;
+    font-size: 2em;
 }
 
 .author {
