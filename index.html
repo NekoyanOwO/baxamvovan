@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NekoyanUwU</title>
+    <link rel="shotcut icon" href="shotcut icon.ico" type="x-icon">
     <link rel="stylesheet" href="style.css">
     <script>
         function generateAnswer() {
@@ -21,19 +22,17 @@
     <script src="script.js"></script>
 </head>
 <body>
-    <header class="container">
-        <div class="topnav">
-            <div class="image">
-                <a href="index.html"><img src="image/thumbnail.png" width=100px height=auto alt="Image"></a>
-            </div>
-            <div class="story">
-                <p><em>Đủ thứ ba xàm vớ vẩn linh ta linh tinh ở đây !!</em></p>
-            </div>
+    <header class="container" style="display: flex; align-items: center;">
+        <div class="image" style="flex: 1;">
+            <a href="#home"><img src="image/thumbnail.png" height="40"></a>
+        </div>
+        <div class="story" style="flex: 2; text-align: left; font-size: 20px;">
+            <i>Đủ thứ ba xàm vớ vẩn linh ta linh tinh ở đây !!</i>
         </div>
     </header>
     <div class="content">
         <div class="video">
-            <video style="width:100%; height:auto;" controls>
+            <video width="800" height="450" controls>
                 <source src="video/video.mp4" type="video/mp4"></video>
         </div>
         <div class="bot">
@@ -44,7 +43,8 @@
             <p id="botAnswer"></p>
         </div>
         <div class="AmericaYa?">
-            <a href="AmericaYa.html">America Ya ??</a>
+            <a href="america ya.html">America Ya ??</a>
+        </div>
         <div class="osu!beatmap">
             <h2>My osu!beatmap</h2>
             <ul>
@@ -58,8 +58,10 @@
             <div class="center-point"></div>
         </div>
     </div>
-    <div class="artist">
-        <p class="artist"><em>Tạo bởi: </em><b><i><a href="https://www.facebook.com/NekoyanUwU">Kuro Nekoyan</a></i></b></p>
-    </div>
+    <footer class="credit" style="text-align: center;">
+        <div>
+            <p class="artist" style="text-align: center"><em>Tạo bởi: </em><b><i><a href="https://www.facebook.com/NekoyanUwU">Kuro Nekoyan</a></i></b></p>
+        </div>
+    </footer>
 </body>
 </html> 
