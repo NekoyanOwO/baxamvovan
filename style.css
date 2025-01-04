@@ -6,6 +6,14 @@ body {
     height: 50px;
 }
 
+a {
+    text-decoration: none;
+    color: blue;
+}
+a:hover {
+    text-decoration: underline;
+}
+
 .header {
     display: block;
     unicode-bidi: isolate;
@@ -29,13 +37,78 @@ body {
         width: 120%;
 }
 
+.button {
+    border: none;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    left: -13px;
+    top: 3px;
+    z-index: 2; 
+    background-color: rgb(43, 255, 0);
+}
+
+.button::before, .button::after, .button span {
+    background-color: white;
+    width: 20px;
+    height: 3px;
+    position: absolute;
+}
+
+.button::before {
+    top: 15px;
+}
+
+.button::after {
+    bottom: 15px;
+}
+
+.button span {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.button:hover {
+    background-color: #45a049;
+}
+
+.button:active {
+    background-color: #45a049;
+    box-shadow: 0 5px #8f8f8f;
+    transform: translateY(2px);
+}
+
+.menubtn {
+    font-size: 0;
+    line-height: 0;
+    text-align: center;
+    padding: .75rem .5rem .5rem;
+    width: 46px;
+    border-radius: 4px;
+    z-index: 11;
+    height: 46px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 10px;
+    right: 2rem;
+    margin: auto;
+}
+
 .content {
     top: 20px;
     width: 80%;
-    margin: auto;
+    margin: 0 auto;
     background: cyan;
-    padding: 125px;
     box-shadow: 0px rgba(0, 0, 0, 0.1);
+    padding: 125px;
+    border-radius: 10px;
 }
 
 h1 {
@@ -48,10 +121,14 @@ h1 {
 }
 
 .video {
-    width: 100%;
-    height: 450;
-    width: 800;
-    text-align: center; 
+    top: 20px;
+    background: cyan; 
+    padding: 25px;
+}
+
+.AmericaYa {
+    background: cyan;
+    padding: 25px;
 }
 
 .clock {    
@@ -123,6 +200,6 @@ h1 {
     color: grey;
     font-size: 20px;
     font-family: Arial, sans-serif;
-    padding: 0px;
+    padding: 20px;
     
 }
