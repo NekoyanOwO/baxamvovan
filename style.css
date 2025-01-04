@@ -1,58 +1,32 @@
 body {
     font-family: cursive;
-    font-size: 100%;
     margin: 0;
     padding: 0;
-    background-color: #FFD700;
+    background-color: #eaff00;
+    height: 50px;
 }
 
-@media only screen and (max-width: 600px) {
-    body {
-        background-color: #000000;
-    }
-}
-
-.container {
-    display: flex;
-    flex-wrap: wrap;
-    
-    .topnav {
-        font-family: Arial, sans-serif;
-        overflow: hidden;
-        background-color: #eaff00;
-        position: fixed;
-        top: 0px;
-        width: 100%;
-        height: 10%;
-      }
-      
-      .topnav a {
-        float: left;
-        display: block;
-        color: #00f7ff;
-        text-align: center;
-        padding: 6px 8px;
-        text-decoration: none;
-      }
-      
-      .topnav a:hover {
-        background-color: #ddd;
-        color: black;
-      }
-      
-      .topnav a.active {
-        background-color: #04AA6D;
-        color: white;
-      }
-    }
-}
-
-.item {
-    flex: 1 1 200px;
+.header {
+    display: block;
+    unicode-bidi: isolate;
+    background-color: #eaff00;
+    color: #eaff00;
+    font-size: 20px;
+    font-family: Arial, sans-serif;
+    padding: 0px;
 }
 
 .image {
-    padding: 30px;
+    width: 100%;
+    text-align: left; 
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+
+.story {
+        font-style: italic;
+        width: 120%;
 }
 
 .content {
@@ -66,17 +40,11 @@ body {
 
 h1 {
     color: #91ff00;
-    font-size: 2em;
 }
 
 .author {
     font-style: italic;
     color: #ffffff;
-}
-
-.story {
-    text-align: center;
-    top: 3px;
 }
 
 .video {
@@ -148,8 +116,13 @@ h1 {
     transform: translate(-50%, -50%);
 }
 
-.artist {
-    font-family: Arial, sans-serif;
-    text-align: center;
+.footer {
+    display: block;
+    unicode-bidi: isolate;
+    background-color: black;
     color: grey;
+    font-size: 20px;
+    font-family: Arial, sans-serif;
+    padding: 0px;
+    
 }
