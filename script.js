@@ -8,9 +8,19 @@ function updateClock() {
     var minuteDegree = ((minute / 60) * 360) + (second / 60) * 6;
     var hourDegree = ((hour / 12) * 360) + (minute / 60) * 30;
 
-    document.getElementById('second-hand').style.transform = `rotate(${secondDegree}deg)`;
-    document.getElementById('minute-hand').style.transform = `rotate(${minuteDegree}deg)`;
-    document.getElementById('hour-hand').style.transform = `rotate(${hourDegree}deg)`;
+    var secondHand = document.getElementById('second-hand');
+    var minuteHand = document.getElementById('minute-hand');
+    var hourHand = document.getElementById('hour-hand');
+
+    if (second === 0) {
+        secondHand.style.transition = 'none';
+    } else {
+        secondHand.style.transition = 'transform 0.05s linear';
+    }
+
+    secondHand.style.transform = `rotate(${secondDegree}deg)`;
+    minuteHand.style.transform = `rotate(${minuteDegree}deg)`;
+    hourHand.style.transform = `rotate(${hourDegree}deg)`;
 }
 
 setInterval(updateClock, 1000);
