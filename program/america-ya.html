@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shotcut icon" href="../image/shotcut icon.ico" type="x-icon">
+    <link href="../bootstrap-5.3.3-dist\css\bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="../bootstrap-5.3.3-dist\js\bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../style.css">
+    <title>America Ya :D</title>
+    <style>
+        #inputText {
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+    <header class="container-fluid">
+        <div class="image" style="flex: 1;">
+            <a href="../index.html"><img src="../image/thumbnail.png" height="40"></a>
+        </div>
+        <div class="story" style="flex: 2">
+            <b><i>Đủ thứ ba xàm vớ vẩn linh ta linh tinh ở đây !!</i></b>
+        </div>
+        <span class="menu" style="flex: 1; text-align: right;">
+            <button class="button" href="javascript:void(0)" onclick="openNav()">
+                <i style="top: 11px; background-color: #7dc8ff; display: block; width: 21px; height: 2px; left: 10px; position: absolute"></i>
+                <i style="top: 19px; background-color: #7dc8ff; display: block; width: 21px; height: 2px; left: 10px; position: absolute"></i>
+                <i style="top: 27px; background-color: #7dc8ff; display: block; width: 21px; height: 2px; left: 10px; position: absolute"></i>
+            </button>
+            <div class="nav" id="sideNav">
+                <img src="../image/thumbnail.png" height="40" style="margin-left: 28px;">
+                <b><a href="../index.html">Trang chủ</a>
+                <a href="yes or no bot.html">"Yes or No" bot</a>
+                <a href="america ya.html">America ya :DD</a>
+                <a href="https://osu.ppy.sh/users/33857223">Profile osu của tui >w<</a>
+                <a href="https://www.facebook.com/NekoyanOwO">Contact??</a></b>
+            </div>
+            <script>
+                function toggleNav() {
+                    var sideNav = document.getElementById("sideNav");
+                    if (sideNav.style.width === "222px") {
+                        sideNav.style.width = "0";
+                    } else {
+                        sideNav.style.width = "222px";
+                    }
+                }
+                document.querySelector('.button').addEventListener('click', toggleNav);
+            </script>
+        </span>
+    </header>
+    <div class="content">
+        <div class=AmericaYa>
+            <b>You: </b>
+            <input type="text" id="inputText" placeholder="America Ya :D" onkeypress="checkEnter(event)">
+            <button onclick="displayMessage()">Enter</button>
+            <div id="message"></div>
+            <script>
+                function displayMessage() {
+                    var input = document.getElementById("inputText").value;
+                    var message = "";
+                    if (input === "America Ya :D") {
+                        var audioPlayer = document.getElementById('audioPlayer');
+                        audioPlayer.play();
+                        for (var i = 0; i < 727; i++) {
+                            message += "Hallo :D<br>";
+                        }
+                    } else {
+                        for (var i = 0; i < 727; i++) {
+                            message += "Life is not Daijoubu :(<br>";
+                        }
+                    }
+                    document.getElementById("message").innerHTML = message;
+                }
+                function checkEnter(event) {
+                    if (event.keyCode === 13) {
+                        displayMessage();
+                    }
+                }
+            </script>
+        </div>
+    </div>
+    <footer class="credit" style="text-align: center;">
+        <div>
+            <p class="artist" style="text-align: center"><em><a href="https://github.com/NekoyanOwO/baxamvovan">Mã nguồn</a> | Tạo bởi: </em><b><i><a href="https://www.facebook.com/NekoyanOwO">Kuro Nekoyan</a></i></b></p>
+        </div>
+    </footer>
+</body>
+</html>
