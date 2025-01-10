@@ -24,15 +24,3 @@ function updateClock() {
     minuteHand.style.transform = `rotate(${minuteDegree}deg)`;
     hourHand.style.transform = `rotate(${hourDegree}deg)`;
 }
-
-function generateAnswer() {
-    var question = document.getElementById("questionInput").value;
-    if (question.trim() === "") {
-      alert("Please enter a question.");
-      return;
-    }
-    var randomNumber = Math.floor(Math.random() * 2);
-    var answer = (randomNumber === 0) ? "Yes" : "No";
-    
-    document.getElementById("botAnswer").innerHTML = "Bot says: " + answer;
-}
