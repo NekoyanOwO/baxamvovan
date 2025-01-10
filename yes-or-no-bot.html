@@ -1,44 +1,43 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shotcut icon" href="shotcut icon.ico" type="x-icon">
-    <link rel="stylesheet" href="style.css">
+    <link rel="shotcut icon" href="../image/shotcut icon.ico" type="x-icon">
+    <link href="../bootstrap-5.3.3-dist\css\bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="../bootstrap-5.3.3-dist\js\bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../style.css">
     <title>Yes or No?</title>
-    <script src="script.js"></script>
-    <script>
-        history.pushState({}, '', '/yes-or-no-bot');
-    </script>
 </head>
 <body>
-    <header class="container" style="display: flex; align-items: center;">
+    <header class="container-fluid">
         <div class="image" style="flex: 1;">
-            <a href="https://cunny-nekoyan.vercel.app/"><img src="image/thumbnail.png" height="40"></a>
+            <a href="../index.html"><img src="../image/thumbnail.png" height="40"></a>
         </div>
-        <div class="story" style="flex: 2; text-align: center;">
-            <i>Đủ thứ ba xàm vớ vẩn linh ta linh tinh ở đây !!</i>
+        <div class="story" style="flex: 2">
+            <b><i>Đủ thứ ba xàm vớ vẩn linh ta linh tinh ở đây !!</i></b>
         </div>
         <span class="menu" style="flex: 1; text-align: right;">
             <button class="button" href="javascript:void(0)" onclick="openNav()">
-                <i style="top: 11px; background-color: yellow; display: block; width: 21px; height: 2px; left: 10px; position: absolute"></i>
-                <i style="top: 19px; background-color: yellow; display: block; width: 21px; height: 2px; left: 10px; position: absolute"></i>
-                <i style="top: 27px; background-color: yellow; display: block; width: 21px; height: 2px; left: 10px; position: absolute"></i>
+                <i style="top: 11px; background-color: #7dc8ff; display: block; width: 21px; height: 2px; left: 10px; position: absolute"></i>
+                <i style="top: 19px; background-color: #7dc8ff; display: block; width: 21px; height: 2px; left: 10px; position: absolute"></i>
+                <i style="top: 27px; background-color: #7dc8ff; display: block; width: 21px; height: 2px; left: 10px; position: absolute"></i>
             </button>
-            <div id="sideNav" style="width: 0; height: 100%; position: fixed; right: 0; top: 0; background-color: rgb(0, 0, 0); overflow-x: hidden; transition: 0.5s; padding-top: 60px; z-index: 1;">
-                <a href="https://cunny-nekoyan.vercel.app/yes-or-no-bot.html" style="padding: 8px 8px 8px 50px; font-size: 16px; color: #818181; display: block; transition: 0.3s;">Trang chủ</a><br>
-                <a href="https://cunny-nekoyan.vercel.app/yes-or-no-bot.html" style="padding: 8px 8px 8px 50px; font-size: 16px; color: #818181; display: block; transition: 0.3s;">"Yes or No" bot</a><br>
-                <a href="https://cunny-nekoyan.vercel.app/america-ya.html" style="padding: 8px 8px 8px 50px; font-size: 16px; color: #818181; display: block; transition: 0.3s;">America ya :DD</a><br>
-                <a href="https://osu.ppy.sh/users/33857223" style="padding: 8px 8px 8px 50px; font-size: 16px; color: #818181; display: block; transition: 0.3s;">Profile osu của tui >w<</a><br>
-                <a href="https://www.facebook.com/NekoyanOwO" style="padding: 8px 8px 8px 50px; font-size: 16px; color: #818181; display: block; transition: 0.3s;">Contact??</a><br>
+            <div class="nav" id="sideNav">
+                <img src="../image/thumbnail.png" height="40" style="margin-left: 28px;">
+                <b><a href="../index.html">Trang chủ</a>
+                <a href="yes or no bot.html">"Yes or No" bot</a>
+                <a href="america ya.html">America ya :DD</a>
+                <a href="https://osu.ppy.sh/users/33857223">Profile osu của tui >w<</a>
+                <a href="https://www.facebook.com/NekoyanOwO">Contact??</a></b>
             </div>
             <script>
                 function toggleNav() {
                     var sideNav = document.getElementById("sideNav");
-                    if (sideNav.style.width === "250px") {
+                    if (sideNav.style.width === "222px") {
                         sideNav.style.width = "0";
                     } else {
-                        sideNav.style.width = "250px";
+                        sideNav.style.width = "222px";
                     }
                 }
                 document.querySelector('.button').addEventListener('click', toggleNav);
@@ -50,13 +49,33 @@
             <h2>Yes or No Bot</h2>
             <label for="questionInput">Enter your question:</label><br>
             <input type="text" id="questionInput" name="questionInput">
-            <button onclick="generateAnswer()">Ask the Bot</button> 
+            <button onclick="generateAnswer()">Ask the Bot</button>
             <p id="botAnswer"></p>
+            <script>
+                function generateAnswer() {
+                    var question = document.getElementById("questionInput").value;
+                    if (question.trim() === "") {
+                        alert("Please enter a question.");
+                        return;
+                    }
+                
+                    var randomNumber = Math.floor(Math.random() * 2);
+                    var answer = (randomNumber === 0) ? "Yes" : "No";
+                
+                    document.getElementById("botAnswer").innerHTML = "Bot says: " + answer;
+                }
+                
+                document.getElementById("questionInput").addEventListener("keypress", function(event) {
+                    if (event.key === "Enter") {
+                        generateAnswer();
+                    }
+                });
+            </script>
         </div>
     </div>
     <footer class="credit" style="text-align: center;">
         <div>
-            <p class="artist" style="text-align: center"><em>Tạo bởi: </em><b><i><a href="https://www.facebook.com/NekoyanOwO">Kuro Nekoyan</a></i></b></p>
+            <p class="artist" style="text-align: center"><em><a href="https://github.com/NekoyanOwO/baxamvovan">Mã nguồn</a> | Tạo bởi: </em><b><i><a href="https://www.facebook.com/NekoyanOwO">Kuro Nekoyan</a></i></b></p>
         </div>
     </footer>
 </body>
