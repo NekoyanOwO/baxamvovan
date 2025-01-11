@@ -1,36 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shotcut icon" href="../image/shotcut icon.ico" type="x-icon">
-    <link href="../bootstrap-5.3.3-dist\css\bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="../bootstrap-5.3.3-dist\js\bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="../style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
     <title>Yes or No?</title>
+    <link rel="shotcut icon" href="../image/shotcut icon.ico" type="x-icon">
+    <link rel="stylesheet" href="../style.css">
+    <link href="../bootstrap-5.3.3-dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="../bootstrap-5.3.3-dist\js\bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </head>
 <body>
     <header class="container-fluid">
-        <div class="image" style="flex: 1;">
-            <a href="../index.html"><img src="../image/thumbnail.png" height="40"></a>
+        <div class="image" style="flex: 1; width: 100%; height: auto">
+            <a href="../index.html"><img src="../image/thumbnail.png" height="45"></a>
         </div>
-        <div class="story" style="flex: 2">
+        <div class="story d-none d-md-block" style="flex: 2;">
             <b><i>Đủ thứ ba xàm vớ vẩn linh ta linh tinh ở đây !!</i></b>
         </div>
-        <span class="menu" style="flex: 1; text-align: right;">
-            <button class="button" href="javascript:void(0)" onclick="openNav()">
+        <nav class="navbar navbar-expand-sm d-none d-md-block" style="flex: 3">
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/program/yes-or-no-bot.html"><b>"Yes or No" bot</b></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/program/america-ya.html"><b>America ya :DD</b></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://osu.ppy.sh/users/33857223"><b>Profile osu của tui >w<</b></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><b>More</b></a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-bs-toggle="dropdown" onmouseover="this.style.color='#42b9ff'" onmouseout="this.style.color='yellow'">
+                            <b>Contact</b>
+                        </a>
+                        <div class="dropdown-menu" style="right: 0; left: auto;">
+                            <a class="dropdown-item" href="https://www.facebook.com/NekoyanOwO"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/2023_Facebook_icon.svg/900px-2023_Facebook_icon.svg.png" width="24px"> Facebook</a>
+                            <a class="dropdown-item" href="https://discord.gg/eYGysnVGP4"><img src="https://cdn.prod.website-files.com/6257adef93867e50d84d30e2/636e0a69f118df70ad7828d4_icon_clyde_blurple_RGB.svg" width="24px"> Discord</a>
+                            <a class="dropdown-item" href="https://x.com/nekouwu_nyan"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/X_logo_2023.svg/450px-X_logo_2023.svg.png" width="24px"> Twitter / X</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <span class="menu" style="flex: 2; text-align: right;">
+            <button class="button" href="javascript:void(0)" onclick="toggleNav()">
                 <i style="top: 11px; background-color: #7dc8ff; display: block; width: 21px; height: 2px; left: 10px; position: absolute"></i>
                 <i style="top: 19px; background-color: #7dc8ff; display: block; width: 21px; height: 2px; left: 10px; position: absolute"></i>
                 <i style="top: 27px; background-color: #7dc8ff; display: block; width: 21px; height: 2px; left: 10px; position: absolute"></i>
             </button>
-            <div class="nav" id="sideNav">
-                <img src="../image/thumbnail.png" height="40" style="margin-left: 28px;">
+            <nav class="nav2" id="sideNav">
+                <img src="../image/thumbnail.png" height="40" style="margin-right: 60px;">
                 <b><a href="../index.html">Trang chủ</a>
-                <a href="yes-or-no-bot.html">"Yes or No" bot</a>
-                <a href="america-ya.html">America ya :DD</a>
+                <a href="/program/yes-or-no-bot.html">"Yes or No" bot</a>
+                <a href="/program/america-ya.html">America ya :DD</a>
                 <a href="https://osu.ppy.sh/users/33857223">Profile osu của tui >w<</a>
-                <a href="https://www.facebook.com/NekoyanOwO">Contact??</a></b>
-            </div>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-bs-toggle="dropdown" onmouseover="this.style.color='#42b9ff'" onmouseout="this.style.color='yellow'"><b>Contact</b></a>
+                    <div class="dropdown-menu" style="right: 0; left: auto;">
+                        <a class="dropdown-item" href="https://www.facebook.com/NekoyanOwO"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/2023_Facebook_icon.svg/900px-2023_Facebook_icon.svg.png" width="24px"> Facebook</a>
+                        <a class="dropdown-item" href="https://discord.gg/eYGysnVGP4"><img src="https://cdn.prod.website-files.com/6257adef93867e50d84d30e2/636e0a69f118df70ad7828d4_icon_clyde_blurple_RGB.svg" width="24px"> Discord</a>
+                        <a class="dropdown-item" href="https://x.com/nekouwu_nyan"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/X_logo_2023.svg/450px-X_logo_2023.svg.png" width="24px"> Twitter / X</a>
+                    </div>
+                </li></b>
+            </nav>
             <script>
                 function toggleNav() {
                     var sideNav = document.getElementById("sideNav");
@@ -40,14 +75,14 @@
                         sideNav.style.width = "222px";
                     }
                 }
-                document.querySelector('.button').addEventListener('click', toggleNav);
+                document.querySelector('.button').addEventListener('onclick', toggleNav);
             </script>
         </span>
     </header>
     <div class="content">
-        <div class="bot" style="text-align: center;">
-            <h2>Yes or No Bot</h2>
-            <label for="questionInput">Enter your question:</label><br>
+        <div class="bot" style="text-align: center; height: 450px">
+            <h2>Yes or No Bot</h2><br>
+            <label for="questionInput">Enter your question:</label><br><br>
             <input type="text" id="questionInput" name="questionInput">
             <button onclick="generateAnswer()">Ask the Bot</button>
             <p id="botAnswer"></p>
