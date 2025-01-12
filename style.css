@@ -197,16 +197,17 @@ header {
     }
 }
 
-.content {
+.face {
+    position: sticky;
     top: 20px;
     width: 100%;
     height: 100%;
     margin: 0 auto;
-    background: linear-gradient(to bottom, #0077ff, pink);
     box-shadow: 0px rgba(0, 0, 0, 0.1);
     padding: 70px 125px 60px 125px;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 
     .alert {
         text-align: center;
@@ -221,9 +222,24 @@ header {
     }
 }
 
+.content {
+    position: relative;
+    top: auto;
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    background: #6cc2ff;
+    border-radius: 15px;
+    border: 2px #000000 solid;
+    padding: 70px 125px 60px 125px;
+    align-items: center;
+    justify-content: center;
+    overflow-y: auto;
+}
+
 .wellcome {
     box-sizing: border-box;
-    margin-bottom: 60px;
+    margin-bottom: 5px;
     animation: move 1.333s infinite;
     text-align: center;
     position: relative;
